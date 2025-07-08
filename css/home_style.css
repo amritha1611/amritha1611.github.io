@@ -1,0 +1,503 @@
+body {
+    margin: 0;                /* Remove default body margin */
+    padding: 0;               /* Remove default body padding */
+    color: red;
+    background-color: #FDBEDD;
+    font-family: 'Press Start 2P', cursive;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    cursor: url('../assets/cursor1_imresizer.png'), auto;
+    width: 100vw; /* Ensure body takes full viewport width */
+    box-sizing: border-box; /* Include padding/border in width */
+    overflow-x: hidden;
+}
+
+a, a:hover, a:active {
+    cursor: url('../assets/cursor2_imresizer.png'), auto;
+}
+
+/********************* Home Bar - Top Container **************************/
+
+.topcontainer {
+    /*background-color:pink;*/
+    font-size: 1.2em;
+    margin: 2% auto 2% auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-content:center;
+}
+
+.button {
+    margin: auto;
+}
+
+a{
+  color: #ee0077;
+  /*background-color: pink;*/
+  text-decoration: none;
+}
+
+a:hover {
+  /*background-color: pink;*/
+  color: white;
+}
+
+a:visited {
+  background-color: black;
+  color: none;
+}
+
+/********************** Body Image and Title - Middle Container ********************/
+.home-section {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/Afternoon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Move content to the top */
+    margin: 0;
+    padding: 2vh 0 0 0;         /* Optional: adjust top space */
+}
+
+.about {
+    color: #ee0077;
+    font-size: 1em;
+    margin: 2em auto 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+    word-break: break-word;
+    text-align: center;
+}
+
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid #ee0077; /* Cursor */
+    animation:
+        typing 2.5s steps(22, end),
+        blink-caret 0.7s step-end infinite;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 19ch } /* Adjust to match your text length */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ee0077; }
+}
+
+.pixel-arrow {
+    display: inline-block;
+    font-size: 2.5em;
+    color: #ee0077;
+    margin-top: 0.5em;
+    font-family: 'Press Start 2P', cursive;
+    image-rendering: pixelated;
+    letter-spacing: 0.1em;
+}
+
+.bgimg {
+    /*use media queries here*/
+    width: 30%;
+    height: 10%;
+    display: flex;
+    margin: 5% auto 5% auto;
+    flex-direction: row;
+    justify-content:center;
+    align-content:center;
+}
+
+.intro-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   /* Center horizontally */
+    width: 75%;
+    margin: 8% auto 5% auto;   /* Center the container itself */
+    gap: 2em;
+}
+
+.title {
+    font-size: 1.8em;
+    text-align: center;
+    color: #ee0077;
+    margin: 5% auto 5% auto;
+}
+
+.subtitle {
+    text-align: center;
+    color: #2800cc;
+    font-size: 1em;
+    margin: auto;
+}
+
+
+/******* Tech icons display box ******/
+
+.midcontainer {
+    background: 
+        repeating-linear-gradient(135deg, #fff0fa 0 10px, #FDBEDD 10px 20px),
+        #fff0fa;
+    border: 8px solid #ffffff;
+    border-radius: 0; /* Sharp corners for pixel look */
+    box-shadow:
+        0 0 0 4px #ee0077,
+        8px 8px 0 0 #ffffff,
+        16px 16px 0 0 #FDBEDD;
+    padding: 2.5em 1.5em 2em 1.5em;
+    margin: 2em auto 2em auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+    transition: box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    image-rendering: pixelated;
+}
+
+.midcontainer:hover {
+    box-shadow:
+        0 0 0 4px #ee0077,
+        12px 12px 0 0 #ffffff,
+        24px 24px 0 0 #FDBEDD;
+    border-color: #ee0077;
+    background: 
+        repeating-linear-gradient(135deg, #fff0fa 0 10px, #FDBEDD 10px 20px),
+        #fff0fa;
+    filter: brightness(1.05) saturate(1.2);
+}
+
+.logo-item:hover .logo {
+    transform: scale(1.15) rotate(-6deg);
+    filter: drop-shadow(0 0 8px #ee0077aa);
+    transition: transform 0.2s, filter 0.2s;
+}
+.logo {
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.midcontainer.center {
+    margin-top: 5em; /* or 0, or any small value you like */
+}
+
+.logo {
+    /*use media queries here*/
+    height: 60px;
+    width: 60px;
+    padding: 0%;
+}
+
+.logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1em;
+}
+
+.logo-caption {
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    color: #2800cc;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+/************************** Learning Now *************************/
+.learning-now-section {
+    background: #fff0fa;
+    border: 2px dashed #ee0077;
+    border-radius: 16px;
+    padding: 2em 1em;
+    margin: 2em auto 2em auto;
+    width: 70%;
+    box-shadow: 0 4px 24px #ee007733;
+    text-align: center;
+}
+
+.learning-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #ee0077;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    letter-spacing: 0.05em;
+}
+
+.sparkle {
+    animation: sparkle 1.2s infinite alternate;
+}
+
+@keyframes sparkle {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(2); transform: scale(1.2) rotate(-10deg);}
+}
+
+.learning-desc {
+    font-family: 'Press Start 2P', cursive;
+    color: #2800cc;
+    font-size: 1em;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.highlight {
+    color: #ee0077;
+    background: #ffe0f5;
+    padding: 0.1em 0.3em;
+    border-radius: 6px;
+}
+
+.wave {
+    display: inline-block;
+    animation: wave 1.2s infinite;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg);}
+    20% { transform: rotate(15deg);}
+    40% { transform: rotate(-10deg);}
+    60% { transform: rotate(10deg);}
+    80% { transform: rotate(-5deg);}
+    100% { transform: rotate(0deg);}
+}
+
+/************************** Certifications *************************/
+.certifications-section {
+    background: #fff0fa;
+    border: 2px dashed #ee0077;
+    border-radius: 16px;
+    padding: 2em 1em;
+    margin: 2em auto 2em auto;
+    width: 70%;
+    box-shadow: 0 4px 24px #ee007733;
+    text-align: center;
+}
+
+.cert-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #ee0077;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    letter-spacing: 0.05em;
+}
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+
+.cert-list li {
+    margin: 1em 0;
+    font-family: 'Press Start 2P', cursive;
+    color: #2800cc;
+    font-size: 1em;
+    background: #ffe0f5;
+    border-radius: 8px;
+    padding: 0.8em 1.2em;
+    box-shadow: 0 2px 8px #ee007722;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cert-name {
+    font-weight: bold;
+    color: #ee0077;
+}
+
+.cert-org {
+    font-size: 0.85em;
+    color: #2800cc;
+    margin-top: 0.2em;
+    margin-left: 1em;
+}
+
+/************************** Projects *************************/
+.projects-section {
+    width: 90%;
+    margin: 3em auto 3em auto;
+    text-align: center;
+    background: none;
+}
+
+.projects-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #ee0077;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    letter-spacing: 0.05em;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, adjust as needed */
+    gap: 2em;
+    justify-items: center;
+    align-items: stretch;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-card {
+    background: #fff0fa; /* Removed repeating-linear-gradient pattern */
+    border: 4px solid #ffffff;
+    box-shadow:
+        0 0 0 2px #ee0077,
+        6px 6px 0 0 #FDBEDD;
+    border-radius: 0.5em;
+    padding: 1.5em 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    position: relative;
+    min-height: 350px;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.03) rotate(-2deg);
+    box-shadow:
+        0 0 0 2px #ee0077,
+        12px 12px 0 0 #FDBEDD;
+    border-color: #ee0077;
+    z-index: 2;
+}
+
+.project-img {
+    width: 90%;
+    max-width: 260px;
+    height: 140px;
+    object-fit: cover;
+    border: 2px solid #ee0077;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    background: #fff;
+    image-rendering: pixelated;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.project-name {
+    font-family: 'Press Start 2P', cursive;
+    color: #2800cc;
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
+}
+
+.project-desc {
+    font-family: 'Press Start 2P', cursive;
+    color: #ee0077;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}
+
+.project-link {
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    background: #ee0077;
+    padding: 0.4em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    box-shadow: 0 2px 8px #ee007799;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+.project-link:hover {
+    background: #2800cc;
+    color: #fff0fa;
+}
+
+.project-break {
+    grid-column: 1 / -1;
+    height: 0;
+}
+
+/************************** GIFs *************************/
+
+.infocontainers {
+    height: 40%;
+    width: 85%;
+    border: solid #2800cc;
+    padding: 5%;
+}
+.ibtitle {
+    font-size: 1.2em;
+    color: #ee0077;
+    display: inline-block;
+    margin: 10% auto 0 auto;
+}
+
+.ibsubtitle {
+    color: #2800cc;
+    font-size: 1.1em;
+    margin: 5% auto 0 auto;
+    letter-spacing: 2%;
+    display: inline-block;
+}
+
+.sp {
+    color: red;
+}
+
+p:hover {
+    color: white;
+}
+
+#codegif {
+    /* use media queries here*/
+    width:20em;
+    height:15em;
+    margin: 0 5% 0 5%;
+    padding: auto;
+    align-self: flex-start;
+}
+
+#rocketgif {
+    /* use media queries here*/
+    width:20em;
+    height:15em; 
+    margin: auto;
+    padding: auto;
+    align-self: flex-end;
+}
+
+.center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 10% auto auto auto;
+}
