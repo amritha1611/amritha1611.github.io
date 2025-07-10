@@ -51,7 +51,6 @@ pixel-themed-portfolio-main/
 - HTML5
 - CSS3 (no frameworks)
 - [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) font for pixel style
-- 
 ---
 
 ## 📬 License
