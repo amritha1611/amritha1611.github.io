@@ -51,12 +51,6 @@ pixel-themed-portfolio-main/
 - HTML5
 - CSS3 (no frameworks)
 - [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) font for pixel style
----
-
-## 📬 License
-
-MIT License.  
-Feel free to use, modify, and share!
 
 ---
 
@@ -65,3 +59,10 @@ Feel free to use, modify, and share!
 # View the website at:
 
 [https://amritha1611.github.io/](https://amritha1611.github.io/)
+
+---
+
+## 📬 License
+
+MIT License.  
+Feel free to use, modify, and share!
