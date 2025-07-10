@@ -24,8 +24,7 @@ pixel-themed-portfolio-main/
 │
 ├── assets/                # Images, logos, and your resume PDF
 ├── css/
-│   ├── home_style.css     # Main site styles
-│   └── resume_style.css   # Resume page styles
+│   └── home_style.css     # Main site styles
 ├── index.html             # Main portfolio page
 └── ...                    # (Other HTML/CSS files as needed)
 ```
